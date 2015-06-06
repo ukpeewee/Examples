@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="0f674844-a844-451d-8a0c-216af1e361ce" activeEnvironment="Default" name="SampleService" resourceRoot="" soapui-version="5.1.3" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="6fa0020e-5dd0-4d24-9e0b-ca49320bdf10" wsaVersion="NONE" name="BasicHttpBinding_ISampleService" type="wsdl" bindingName="{http://ukpeewee.com/examples/v1}BasicHttpBinding_ISampleService" soapVersion="1_1" anonymous="optional" definition="http://localhost:50223/SampleService.svc?singleWsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:50223/SampleService.svc?singleWsdl"><con:part><con:url>http://localhost:50223/SampleService.svc?singleWsdl</con:url><con:content><![CDATA[<wsdl:definitions name="SampleService" targetNamespace="http://ukpeewee.com/examples/v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://ukpeewee.com/examples/v1" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://ukpeewee.com/examples/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://ukpeewee.com/examples/contracts/v1"/>
+      <xs:element name="GetBadSample">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="q1:GetBadSampleRequest" xmlns:q1="http://ukpeewee.com/examples/contracts/v1"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetBadSampleResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetBadSampleResult" nillable="true" type="q2:GetSampleResponse" xmlns:q2="http://ukpeewee.com/examples/contracts/v1"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetGoodSample">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="q3:GetGoodSampleRequest" xmlns:q3="http://ukpeewee.com/examples/contracts/v1"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetGoodSampleResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetGoodSampleResult" nillable="true" type="q4:GetSampleResponse" xmlns:q4="http://ukpeewee.com/examples/contracts/v1"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetIsRequiredSample">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="q5:GetIsRequiredSampleRequest" xmlns:q5="http://ukpeewee.com/examples/contracts/v1"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetIsRequiredSampleResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetIsRequiredSampleResult" nillable="true" type="q6:GetSampleResponse" xmlns:q6="http://ukpeewee.com/examples/contracts/v1"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+      <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+      <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+      <xs:element name="byte" nillable="true" type="xs:byte"/>
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+      <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+      <xs:element name="double" nillable="true" type="xs:double"/>
+      <xs:element name="float" nillable="true" type="xs:float"/>
+      <xs:element name="int" nillable="true" type="xs:int"/>
+      <xs:element name="long" nillable="true" type="xs:long"/>
+      <xs:element name="QName" nillable="true" type="xs:QName"/>
+      <xs:element name="short" nillable="true" type="xs:short"/>
+      <xs:element name="string" nillable="true" type="xs:string"/>
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+      <xs:element name="char" nillable="true" type="tns:char"/>
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int"/>
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration"/>
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid"/>
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName"/>
+      <xs:attribute name="Id" type="xs:ID"/>
+      <xs:attribute name="Ref" type="xs:IDREF"/>
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://ukpeewee.com/examples/contracts/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ukpeewee.com/examples/contracts/v1">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/Ukpeewee.Examples.WcfService.Contracts.Enumerations"/>
+      <xs:complexType name="GetBadSampleRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SampleEnumeration" type="q1:SampleBadEnumeration" xmlns:q1="http://schemas.datacontract.org/2004/07/Ukpeewee.Examples.WcfService.Contracts.Enumerations"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="GetBadSampleRequest" nillable="true" type="tns:GetBadSampleRequest"/>
+      <xs:complexType name="GetSampleResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsValid" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="ValidationFailures" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="GetSampleResponse" nillable="true" type="tns:GetSampleResponse"/>
+      <xs:complexType name="GetGoodSampleRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SampleEnumeration" type="q2:SampleGoodEnumeration" xmlns:q2="http://schemas.datacontract.org/2004/07/Ukpeewee.Examples.WcfService.Contracts.Enumerations"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="GetGoodSampleRequest" nillable="true" type="tns:GetGoodSampleRequest"/>
+      <xs:complexType name="GetIsRequiredSampleRequest">
+        <xs:sequence>
+          <xs:element name="SampleEnumeration" type="q3:SampleGoodEnumeration" xmlns:q3="http://schemas.datacontract.org/2004/07/Ukpeewee.Examples.WcfService.Contracts.Enumerations"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="GetIsRequiredSampleRequest" nillable="true" type="tns:GetIsRequiredSampleRequest"/>
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Ukpeewee.Examples.WcfService.Contracts.Enumerations" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Ukpeewee.Examples.WcfService.Contracts.Enumerations">
+      <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xs:simpleType name="SampleBadEnumeration">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="North"/>
+          <xs:enumeration value="East"/>
+          <xs:enumeration value="South"/>
+          <xs:enumeration value="West"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="SampleBadEnumeration" nillable="true" type="tns:SampleBadEnumeration"/>
+      <xs:simpleType name="SampleGoodEnumeration">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="North">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="East">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="South">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="West">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="SampleGoodEnumeration" nillable="true" type="tns:SampleGoodEnumeration"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="ISampleService_GetBadSample_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBadSample"/>
+  </wsdl:message>
+  <wsdl:message name="ISampleService_GetBadSample_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBadSampleResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ISampleService_GetGoodSample_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGoodSample"/>
+  </wsdl:message>
+  <wsdl:message name="ISampleService_GetGoodSample_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGoodSampleResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ISampleService_GetIsRequiredSample_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIsRequiredSample"/>
+  </wsdl:message>
+  <wsdl:message name="ISampleService_GetIsRequiredSample_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIsRequiredSampleResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ISampleService">
+    <wsdl:operation name="GetBadSample">
+      <wsdl:input wsaw:Action="http://ukpeewee.com/examples/v1/ISampleService/GetBadSample" message="tns:ISampleService_GetBadSample_InputMessage"/>
+      <wsdl:output wsaw:Action="http://ukpeewee.com/examples/v1/ISampleService/GetBadSampleResponse" message="tns:ISampleService_GetBadSample_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetGoodSample">
+      <wsdl:input wsaw:Action="http://ukpeewee.com/examples/v1/ISampleService/GetGoodSample" message="tns:ISampleService_GetGoodSample_InputMessage"/>
+      <wsdl:output wsaw:Action="http://ukpeewee.com/examples/v1/ISampleService/GetGoodSampleResponse" message="tns:ISampleService_GetGoodSample_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetIsRequiredSample">
+      <wsdl:input wsaw:Action="http://ukpeewee.com/examples/v1/ISampleService/GetIsRequiredSample" message="tns:ISampleService_GetIsRequiredSample_InputMessage"/>
+      <wsdl:output wsaw:Action="http://ukpeewee.com/examples/v1/ISampleService/GetIsRequiredSampleResponse" message="tns:ISampleService_GetIsRequiredSample_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISampleService" type="tns:ISampleService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetBadSample">
+      <soap:operation soapAction="http://ukpeewee.com/examples/v1/ISampleService/GetBadSample" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGoodSample">
+      <soap:operation soapAction="http://ukpeewee.com/examples/v1/ISampleService/GetGoodSample" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIsRequiredSample">
+      <soap:operation soapAction="http://ukpeewee.com/examples/v1/ISampleService/GetIsRequiredSample" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SampleService">
+    <wsdl:port name="BasicHttpBinding_ISampleService" binding="tns:BasicHttpBinding_ISampleService">
+      <soap:address location="http://localhost:50223/SampleService.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:50223/SampleService.svc</con:endpoint></con:endpoints><con:operation id="9b621372-b5ad-4d04-9906-56d8508b508b" isOneWay="false" action="http://ukpeewee.com/examples/v1/ISampleService/GetBadSample" name="GetBadSample" bindingOperationName="GetBadSample" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6c2242a7-8339-4822-89c2-86854f8cafb3" name="1. North"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:50223/SampleService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://ukpeewee.com/examples/v1" xmlns:v11="http://ukpeewee.com/examples/contracts/v1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:GetBadSample>\r
+         <v1:request>\r
+            <v11:SampleEnumeration>North</v11:SampleEnumeration>\r
+         </v1:request>\r
+      </v1:GetBadSample>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ukpeewee.com/examples/v1/ISampleService/GetBadSample"/><con:wsrmConfig version="1.2"/></con:call><con:call id="3454acb6-ee78-4f43-9540-ae5e3ab14b7a" name="2. East"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:50223/SampleService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://ukpeewee.com/examples/v1" xmlns:v11="http://ukpeewee.com/examples/contracts/v1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:GetBadSample>\r
+         <v1:request>\r
+            <v11:SampleEnumeration>East</v11:SampleEnumeration>\r
+         </v1:request>\r
+      </v1:GetBadSample>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ukpeewee.com/examples/v1/ISampleService/GetBadSample"/><con:wsrmConfig version="1.2"/></con:call><con:call id="e99afa47-a2f1-4732-8e69-3c88e7eec852" name="3. South"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:50223/SampleService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://ukpeewee.com/examples/v1" xmlns:v11="http://ukpeewee.com/examples/contracts/v1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:GetBadSample>\r
+         <v1:request>\r
+            <v11:SampleEnumeration>South</v11:SampleEnumeration>\r
+         </v1:request>\r
+      </v1:GetBadSample>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ukpeewee.com/examples/v1/ISampleService/GetBadSample"/><con:wsrmConfig version="1.2"/></con:call><con:call id="6dc71629-f0e0-4d9b-b56e-a030182e6acc" name="4. West"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:50223/SampleService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://ukpeewee.com/examples/v1" xmlns:v11="http://ukpeewee.com/examples/contracts/v1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:GetBadSample>\r
+         <v1:request>\r
+            <v11:SampleEnumeration>West</v11:SampleEnumeration>\r
+         </v1:request>\r
+      </v1:GetBadSample>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ukpeewee.com/examples/v1/ISampleService/GetBadSample"/><con:wsrmConfig version="1.2"/></con:call><con:call id="a070cb94-13bb-4353-ac9a-7ff3afb51ae4" name="5. Empty"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:50223/SampleService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://ukpeewee.com/examples/v1" xmlns:v11="http://ukpeewee.com/examples/contracts/v1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:GetBadSample>\r
+         <v1:request>\r
+         </v1:request>\r
+      </v1:GetBadSample>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ukpeewee.com/examples/v1/ISampleService/GetBadSample"/><con:wsrmConfig version="1.2"/></con:call><con:call id="b2652bb4-cceb-46e3-afbc-9da58ec83943" name="6. Invalid"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:50223/SampleService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://ukpeewee.com/examples/v1" xmlns:v11="http://ukpeewee.com/examples/contracts/v1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:GetBadSample>\r
+         <v1:request>\r
+            <v11:SampleEnumeration>SouthEast</v11:SampleEnumeration>\r
+         </v1:request>\r
+      </v1:GetBadSample>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ukpeewee.com/examples/v1/ISampleService/GetBadSample"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="3d457780-81a7-46b8-8a13-0cac07f1a0a9" isOneWay="false" action="http://ukpeewee.com/examples/v1/ISampleService/GetGoodSample" name="GetGoodSample" bindingOperationName="GetGoodSample" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="97afe356-262b-474f-b590-b23e4ca1e98d" name="1. North"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:50223/SampleService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://ukpeewee.com/examples/v1" xmlns:v11="http://ukpeewee.com/examples/contracts/v1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:GetGoodSample>\r
+         <v1:request>\r
+            <v11:SampleEnumeration>North</v11:SampleEnumeration>\r
+         </v1:request>\r
+      </v1:GetGoodSample>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ukpeewee.com/examples/v1/ISampleService/GetGoodSample"/><con:wsrmConfig version="1.2"/></con:call><con:call id="0bb67b39-06ba-423c-84b2-9ed2d6145d75" name="2. East"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:50223/SampleService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://ukpeewee.com/examples/v1" xmlns:v11="http://ukpeewee.com/examples/contracts/v1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:GetGoodSample>\r
+         <v1:request>\r
+            <v11:SampleEnumeration>East</v11:SampleEnumeration>\r
+         </v1:request>\r
+      </v1:GetGoodSample>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ukpeewee.com/examples/v1/ISampleService/GetGoodSample"/><con:wsrmConfig version="1.2"/></con:call><con:call id="540122e4-d749-4b47-af9a-986036826eae" name="3. South"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:50223/SampleService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://ukpeewee.com/examples/v1" xmlns:v11="http://ukpeewee.com/examples/contracts/v1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:GetGoodSample>\r
+         <v1:request>\r
+            <v11:SampleEnumeration>South</v11:SampleEnumeration>\r
+         </v1:request>\r
+      </v1:GetGoodSample>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ukpeewee.com/examples/v1/ISampleService/GetGoodSample"/><con:wsrmConfig version="1.2"/></con:call><con:call id="fa393e34-7db2-4f83-add7-057bca87cace" name="4. West"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:50223/SampleService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://ukpeewee.com/examples/v1" xmlns:v11="http://ukpeewee.com/examples/contracts/v1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:GetGoodSample>\r
+         <v1:request>\r
+            <v11:SampleEnumeration>West</v11:SampleEnumeration>\r
+         </v1:request>\r
+      </v1:GetGoodSample>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ukpeewee.com/examples/v1/ISampleService/GetGoodSample"/><con:wsrmConfig version="1.2"/></con:call><con:call id="390b2bea-ae70-4b36-87ce-21a382f30c18" name="5. Empty"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:50223/SampleService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://ukpeewee.com/examples/v1" xmlns:v11="http://ukpeewee.com/examples/contracts/v1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:GetGoodSample>\r
+         <v1:request>\r
+         </v1:request>\r
+      </v1:GetGoodSample>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ukpeewee.com/examples/v1/ISampleService/GetGoodSample"/><con:wsrmConfig version="1.2"/></con:call><con:call id="78edb392-21dc-45b8-b18a-62c1f720e35e" name="6. Invalid"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:50223/SampleService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://ukpeewee.com/examples/v1" xmlns:v11="http://ukpeewee.com/examples/contracts/v1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:GetGoodSample>\r
+         <v1:request>\r
+            <v11:SampleEnumeration>SouthEast</v11:SampleEnumeration>\r
+         </v1:request>\r
+      </v1:GetGoodSample>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ukpeewee.com/examples/v1/ISampleService/GetGoodSample"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="43997c4a-4e14-48c0-87bf-250f405ae169" isOneWay="false" action="http://ukpeewee.com/examples/v1/ISampleService/GetIsRequiredSample" name="GetIsRequiredSample" bindingOperationName="GetIsRequiredSample" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f0ab0fe3-fe3f-4f45-b948-9801645905e2" name="1. North"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:50223/SampleService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://ukpeewee.com/examples/v1" xmlns:v11="http://ukpeewee.com/examples/contracts/v1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:GetIsRequiredSample>\r
+         <v1:request>\r
+            <v11:SampleEnumeration>North</v11:SampleEnumeration>\r
+         </v1:request>\r
+      </v1:GetIsRequiredSample>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ukpeewee.com/examples/v1/ISampleService/GetIsRequiredSample"/><con:wsrmConfig version="1.2"/></con:call><con:call id="46348072-d1cc-4c87-82bc-b139fbc3aeb3" name="2. East"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:50223/SampleService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://ukpeewee.com/examples/v1" xmlns:v11="http://ukpeewee.com/examples/contracts/v1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:GetIsRequiredSample>\r
+         <v1:request>\r
+            <v11:SampleEnumeration>East</v11:SampleEnumeration>\r
+         </v1:request>\r
+      </v1:GetIsRequiredSample>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ukpeewee.com/examples/v1/ISampleService/GetIsRequiredSample"/><con:wsrmConfig version="1.2"/></con:call><con:call id="d0288167-da21-4e14-aa5f-95760c814f57" name="3. South"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:50223/SampleService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://ukpeewee.com/examples/v1" xmlns:v11="http://ukpeewee.com/examples/contracts/v1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:GetIsRequiredSample>\r
+         <v1:request>\r
+            <v11:SampleEnumeration>South</v11:SampleEnumeration>\r
+         </v1:request>\r
+      </v1:GetIsRequiredSample>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ukpeewee.com/examples/v1/ISampleService/GetIsRequiredSample"/><con:wsrmConfig version="1.2"/></con:call><con:call id="46908fb7-6612-4cd1-b437-b712e51a827e" name="4. West"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:50223/SampleService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://ukpeewee.com/examples/v1" xmlns:v11="http://ukpeewee.com/examples/contracts/v1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:GetIsRequiredSample>\r
+         <v1:request>\r
+            <v11:SampleEnumeration>West</v11:SampleEnumeration>\r
+         </v1:request>\r
+      </v1:GetIsRequiredSample>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ukpeewee.com/examples/v1/ISampleService/GetIsRequiredSample"/><con:wsrmConfig version="1.2"/></con:call><con:call id="82516e23-e7bf-4c52-bd6d-b8f686d545da" name="5. Empty"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:50223/SampleService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://ukpeewee.com/examples/v1" xmlns:v11="http://ukpeewee.com/examples/contracts/v1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:GetIsRequiredSample>\r
+         <v1:request>\r
+         </v1:request>\r
+      </v1:GetIsRequiredSample>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ukpeewee.com/examples/v1/ISampleService/GetIsRequiredSample"/><con:wsrmConfig version="1.2"/></con:call><con:call id="d71ae52f-3628-46a7-a14b-9a87035c7563" name="5. SouthEast"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:50223/SampleService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://ukpeewee.com/examples/v1" xmlns:v11="http://ukpeewee.com/examples/contracts/v1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:GetIsRequiredSample>\r
+         <v1:request>\r
+            <v11:SampleEnumeration>SouthEast</v11:SampleEnumeration>\r
+         </v1:request>\r
+      </v1:GetIsRequiredSample>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ukpeewee.com/examples/v1/ISampleService/GetIsRequiredSample"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

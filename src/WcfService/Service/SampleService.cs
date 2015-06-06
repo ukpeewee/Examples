@@ -1,0 +1,48 @@
+﻿using System;
+using System.Linq;
+using FluentValidation.Results;
+using Ukpeewee.Examples.WcfService.Contracts;
+using Ukpeewee.Examples.WcfService.Contracts.DataContracts;
+using Ukpeewee.Examples.WcfService.Validators;
+
+namespace Ukpeewee.Examples.WcfService.Service
+{
+    public class SampleService : ISampleService
+    {
+        public GetSampleResponse GetBadSample(GetBadSampleRequest request)
+        {
+            var getBadSampleRequestValidator = new GetBadSampleRequestValidator();
+            ValidationResult validationResult = getBadSampleRequestValidator.Validate(request);
+
+            return new GetSampleResponse
+            {
+                IsValid = validationResult.IsValid,
+                ValidationFailures = validationResult.Errors.Aggregate(string.Empty, (current, failure) => current + failure.ErrorMessage + Environment.NewLine)
+            };
+        }
+
+        public GetSampleResponse GetGoodSample(GetGoodSampleRequest request)
+        {
+            var getGoodSampleRequestValidator = new GetGoodSampleRequestValidator();
+            ValidationResult validationResult = getGoodSampleRequestValidator.Validate(request);
+
+            return new GetSampleResponse
+            {
+                IsValid = validationResult.IsValid,
+                ValidationFailures = validationResult.Errors.Aggregate(string.Empty, (current, failure) => current + failure.ErrorMessage + Environment.NewLine)
+            };
+        }
+
+        public GetSampleResponse GetIsRequiredSample(GetIsRequiredSampleRequest request)
+        {
+            var getGoodSampleRequestValidator = new GetIsRequiredSampleRequestValidator();
+            ValidationResult validationResult = getGoodSampleRequestValidator.Validate(request);
+
+            return new GetSampleResponse
+            {
+                IsValid = validationResult.IsValid,
+                ValidationFailures = validationResult.Errors.Aggregate(string.Empty, (current, failure) => current + failure.ErrorMessage + Environment.NewLine)
+            };
+        }
+    }
+}
