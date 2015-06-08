@@ -1,4 +1,4 @@
-﻿namespace Ukpeewee.Examples.WcfService.Contracts.Enumerations
+﻿namespace Ukpeewee.Examples.FluentValidationWcfEnum.Contracts.Enumerations
 {
     public enum SampleBadEnumeration
     {

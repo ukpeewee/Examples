@@ -1,7 +1,7 @@
 ﻿using System.ServiceModel;
-using Ukpeewee.Examples.WcfService.Contracts.DataContracts;
+using Ukpeewee.Examples.FluentValidationWcfEnum.Contracts.DataContracts;
 
-namespace Ukpeewee.Examples.WcfService.Contracts
+namespace Ukpeewee.Examples.FluentValidationWcfEnum.Contracts
 {
     [ServiceContract(Namespace = "http://ukpeewee.com/examples/v1")]
     public interface ISampleService

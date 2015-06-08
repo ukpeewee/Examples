@@ -3,10 +3,10 @@ using System.Web;
 using Castle.Facilities.WcfIntegration;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
-using Ukpeewee.Examples.WcfService.Contracts;
-using Ukpeewee.Examples.WcfService.Service;
+using Ukpeewee.Examples.FluentValidationWcfEnum.Contracts;
+using Ukpeewee.Examples.FluentValidationWcfEnum.Service;
 
-namespace Ukpeewee.Examples.WcfService
+namespace Ukpeewee.Examples.FluentValidationWcfEnum
 {
     public class Global : HttpApplication
     {

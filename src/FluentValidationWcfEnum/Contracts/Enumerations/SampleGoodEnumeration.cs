@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace Ukpeewee.Examples.WcfService.Contracts.Enumerations
+namespace Ukpeewee.Examples.FluentValidationWcfEnum.Contracts.Enumerations
 {
     [DataContract]
     public enum SampleGoodEnumeration

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Linq;
 using FluentValidation.Results;
-using Ukpeewee.Examples.WcfService.Contracts;
-using Ukpeewee.Examples.WcfService.Contracts.DataContracts;
-using Ukpeewee.Examples.WcfService.Validators;
+using Ukpeewee.Examples.FluentValidationWcfEnum.Contracts;
+using Ukpeewee.Examples.FluentValidationWcfEnum.Contracts.DataContracts;
+using Ukpeewee.Examples.FluentValidationWcfEnum.Validators;
 
-namespace Ukpeewee.Examples.WcfService.Service
+namespace Ukpeewee.Examples.FluentValidationWcfEnum.Service
 {
     public class SampleService : ISampleService
     {

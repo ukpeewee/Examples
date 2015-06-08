@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
-using Ukpeewee.Examples.WcfService.Contracts.DataContracts;
+using Ukpeewee.Examples.FluentValidationWcfEnum.Contracts.DataContracts;
 
-namespace Ukpeewee.Examples.WcfService.Validators
+namespace Ukpeewee.Examples.FluentValidationWcfEnum.Validators
 {
     public class GetGoodSampleRequestValidator : AbstractValidator<GetGoodSampleRequest>
     {

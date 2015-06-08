@@ -1,7 +1,7 @@
 ﻿using System.Runtime.Serialization;
-using Ukpeewee.Examples.WcfService.Contracts.Enumerations;
+using Ukpeewee.Examples.FluentValidationWcfEnum.Contracts.Enumerations;
 
-namespace Ukpeewee.Examples.WcfService.Contracts.DataContracts
+namespace Ukpeewee.Examples.FluentValidationWcfEnum.Contracts.DataContracts
 {
     [DataContract(Namespace = "http://ukpeewee.com/examples/contracts/v1")]
     public class GetIsRequiredSampleRequest

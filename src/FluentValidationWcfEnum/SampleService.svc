@@ -1,1 +1,1 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Factory="Castle.Facilities.WcfIntegration.DefaultServiceHostFactory, Castle.Facilities.WcfIntegration" Service="Ukpeewee.Examples.WcfService.Service.SampleService" %>
+﻿<%@ ServiceHost Language="C#" Debug="true" Factory="Castle.Facilities.WcfIntegration.DefaultServiceHostFactory, Castle.Facilities.WcfIntegration" Service="Ukpeewee.Examples.FluentValidationWcfEnum.Service.SampleService" %>
