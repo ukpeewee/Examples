@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<project default="main">
+	<target name="main">
+		<call target="nuget"/>
+		<call target="build"/>
+	</target>
+	<target name="nuget">
+        <exec program="C:\Program Files\Git\bin\NuGet.exe">
+            <arg value="restore" />
+			<arg value="Examples.sln"/>
+        </exec>	
+	</target>
+	<target name="build" description="Compiles the .Net solution">
+		<!-- build the solution -->
+		<echo message="Building ${project::get-name()}" />
+		<!-- need nant.contrib.tasks.dll for msbuild -->
+		<loadtasks assembly="C:\Program Files\Nant-Contrib\bin\NAnt.Contrib.Tasks.dll" />
+		<msbuild project="Examples.sln">
+			<arg value="/p:Configuration=Debug" />
+			<arg value="/t:Rebuild" />
+			<arg value="-p:FrameworkPathOverride=C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" />
+		</msbuild>
+	</target>
+</project>
