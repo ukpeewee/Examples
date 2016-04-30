@@ -14,7 +14,7 @@
 		<!-- build the solution -->
 		<echo message="Building ${project::get-name()}" />
 		<!-- need nant.contrib.tasks.dll for msbuild -->
-		<loadtasks assembly="C:\Program Files\Nant-Contrib\bin\NAnt.Contrib.Tasks.dll" />
+		<loadtasks assembly="C:\Nant-Contrib\bin\NAnt.Contrib.Tasks.dll" />
 		<msbuild project="Examples.sln">
 			<arg value="/p:Configuration=Debug" />
 			<arg value="/t:Rebuild" />
