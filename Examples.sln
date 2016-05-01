@@ -1,9 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.22823.1
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentValidationWcfEnum", "src\FluentValidationWcfEnum\FluentValidationWcfEnum.csproj", "{6D6DB34C-9C07-4FDC-B3E8-86A88CB9663E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{81278335-DE9E-4C1D-8A2A-7E8B877320C3}"
+	ProjectSection(SolutionItems) = preProject
+		default.build = default.build
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

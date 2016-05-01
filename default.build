@@ -2,7 +2,12 @@
 <project default="Main">
 	<target name="Main">
 		<call target="NuGetRestore"/>
-		<call target="MSBuild"/>
+		<call target="MSBuild"/>	
+	</target>
+	<target name="SonarQube">
+		<call target="SonarQubeStart" />
+		<call target="SonarQubeCompile" />
+		<call target="SonarQubeEnd" />
 	</target>
 	<target name="NuGetRestore">
         <exec program="C:\Program Files\Git\bin\NuGet.exe">
@@ -17,5 +22,26 @@
 			<arg value="/t:Rebuild" />
 			<arg value="-p:FrameworkPathOverride=C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" />
 		</msbuild>
+	</target>
+	<target name="SonarQubeStart">
+		<exec program="MSBuild.SonarQube.Runner.exe">
+			<arg value="begin" />
+			<arg value="/k:D9A0DB66-AB4F-4671-8955-0CC79566E2C4:master" />
+			<arg value="/n:Example" />
+			<arg value="/v:master" />			
+		</exec>
+	</target>
+	<target name="SonarQubeCompile">
+		<exec program="C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe">
+			<arg value="Examples.sln" />
+			<arg value="/p:Configuration=Debug" />
+			<arg value="/t:Rebuild" />
+			<arg value="-p:FrameworkPathOverride=C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" />	
+		</exec>
+	</target>
+	<target name="SonarQubeEnd">
+		<exec program="MSBuild.SonarQube.Runner.exe">
+			<arg value="end" />
+		</exec>
 	</target>
 </project>
