@@ -24,7 +24,7 @@
 		</msbuild>
 	</target>
 	<target name="SonarQubeStart">
-		<exec program="MSBuild.SonarQube.Runner.exe">
+		<exec program="C:\SonarQubeRunner\MSBuild.SonarQube.Runner.exe">
 			<arg value="begin" />
 			<arg value="/k:D9A0DB66-AB4F-4671-8955-0CC79566E2C4:master" />
 			<arg value="/n:Example" />
@@ -40,7 +40,7 @@
 		</exec>
 	</target>
 	<target name="SonarQubeEnd">
-		<exec program="MSBuild.SonarQube.Runner.exe">
+		<exec program="C:\SonarQubeRunner\MSBuild.SonarQube.Runner.exe">
 			<arg value="end" />
 		</exec>
 	</target>
