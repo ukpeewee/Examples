@@ -5,6 +5,7 @@
 		<call target="MSBuild"/>	
 	</target>
 	<target name="SonarQube">
+		<call target="NuGetRestore"/>
 		<call target="SonarQubeStart" />
 		<call target="SonarQubeCompile" />
 		<call target="SonarQubeEnd" />
