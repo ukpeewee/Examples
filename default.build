@@ -22,6 +22,8 @@
 			<arg value="/p:Configuration=Debug" />
 			<arg value="/t:Rebuild" />
 			<arg value="-p:FrameworkPathOverride=C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" />
+      <arg value="/p:RunOctoPack=true" />
+      <arg value="/p:OctoPackPublishPackageToFileShare=C:\NuGetRepo" />
 		</msbuild>
 	</target>
 	<target name="SonarQubeStart">
@@ -29,7 +31,7 @@
 			<arg value="begin" />
 			<arg value="/k:D9A0DB66-AB4F-4671-8955-0CC79566E2C4:master" />
 			<arg value="/n:Example" />
-			<arg value="/v:master" />			
+			<arg value="/v:master" />
 		</exec>
 	</target>
 	<target name="SonarQubeCompile">
