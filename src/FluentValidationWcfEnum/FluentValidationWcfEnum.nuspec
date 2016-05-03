@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Ukpeewee.Examples.FluentValidationWcfEnum.Service.SampleService</id>
+    <title>This is a test</title>
+    <version>1.0.0</version>
+    <authors>Peter J Butler</authors>
+    <owners>Peter J Butler</owners>
+    <licenseUrl>http://ukpeewee.com</licenseUrl>
+    <projectUrl>http://ukpeewee.com</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A sample project</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+</package>
